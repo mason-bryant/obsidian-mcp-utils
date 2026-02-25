@@ -1,0 +1,38 @@
+name: Release Obsidian Plugin
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate tag matches manifest version
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          VERSION=$(jq -r '.version' manifest.json)
+          if [ "$TAG" != "$VERSION" ]; then
+            echo "Tag ($TAG) must match manifest version ($VERSION)"
+            exit 1
+          fi
+
+      - name: Validate versions.json contains current version
+        run: |
+          VERSION=$(jq -r '.version' manifest.json)
+          jq -e --arg v "$VERSION" '.[$v]' versions.json > /dev/null
+
+      - name: Create GitHub release and upload assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            manifest.json
+            main.js
+            versions.json

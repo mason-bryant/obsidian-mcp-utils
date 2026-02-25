@@ -1,9 +1,10 @@
 {
-  "id": "obsidian-mcp-search",
+  "id": "mcp-search-server",
   "name": "Obsidian MCP Search",
   "version": "0.1.0",
   "minAppVersion": "1.5.0",
   "description": "Local MCP server for secure tag/property/full-text search with per-directory read/write ACL.",
-  "author": "Local",
+  "author": "Mason Bryant",
+  "authorUrl": "https://github.com/mason-bryant",
   "isDesktopOnly": true
 }

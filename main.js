@@ -385,7 +385,7 @@ class ObsidianMcpPlugin extends Plugin {
     };
 
     if (payload.token) payload.token = '[REDACTED]';
-    console.log('[obsidian-mcp-search]', payload);
+    console.log('[mcp-search-server]', payload);
   }
 
   registerVaultEvents() {
@@ -633,7 +633,7 @@ class ObsidianMcpPlugin extends Plugin {
           result: {
             protocolVersion: '2025-03-26',
             serverInfo: {
-              name: 'obsidian-mcp-search',
+              name: 'mcp-search-server',
               version: this.manifest.version
             },
             capabilities: {

@@ -1,4 +1,4 @@
-# Obsidian MCP Search Plugin (Local)
+# Obsidian MCP Search Plugin
 
 This plugin embeds a local MCP-compatible HTTP server inside Obsidian Desktop and exposes tools for:
 
@@ -14,13 +14,21 @@ This plugin embeds a local MCP-compatible HTTP server inside Obsidian Desktop an
 - `main.js`
 - `versions.json`
 
+## Community plugin release files
+
+Each GitHub release must include:
+
+- `manifest.json`
+- `main.js`
+- `styles.css` (only if your plugin uses one)
+
 ## Local install in Obsidian
 
 1. Find your Obsidian vault's plugins directory:
 - `<Vault>/.obsidian/plugins/`
 
 2. Create a new plugin folder:
-- `<Vault>/.obsidian/plugins/obsidian-mcp-search/`
+- `<Vault>/.obsidian/plugins/mcp-search-server/`
 
 3. Copy these files into that folder:
 - `manifest.json`
@@ -30,6 +38,15 @@ This plugin embeds a local MCP-compatible HTTP server inside Obsidian Desktop an
 4. In Obsidian:
 - Settings -> Community plugins -> Reload plugins
 - Enable `Obsidian MCP Search`
+
+## Publish to Obsidian Community Plugins
+
+1. Bump `version` in `manifest.json`.
+2. Add/update version mapping in `versions.json`.
+3. Create a GitHub release tag matching `manifest.json` version (for example, `0.1.1`).
+4. Attach `manifest.json` and `main.js` as release assets.
+5. Submit or update your entry in the Obsidian releases index:
+   - https://github.com/obsidianmd/obsidian-releases
 
 ## First-time setup
 
