@@ -1,4 +1,4 @@
-# mcp-utils
+# MCP-Util
 
 This plugin embeds a local MCP-compatible HTTP server inside Obsidian Desktop and exposes tools for:
 
@@ -22,6 +22,24 @@ Each GitHub release must include:
 - `main.js`
 - `styles.css` (only if your plugin uses one)
 
+## Development workflow (Node.js)
+
+Source lives in `src/main.js`. Build output is root `main.js` (the file Obsidian loads).
+
+1. Install dev dependencies:
+- `npm install`
+
+2. One-time build:
+- `npm run build`
+
+3. Watch + auto-sync into your vault plugin folder:
+- `OBSIDIAN_VAULT_PATH=\"/absolute/path/to/your/vault\" npm run dev:sync`
+
+This will:
+- rebuild `main.js` on every change to `src/main.js`
+- copy `manifest.json`, `main.js`, `versions.json` (and `styles.css` if present) to:
+- `<Vault>/.obsidian/plugins/mcp-search-server/`
+
 ## Local install in Obsidian
 
 1. Find your Obsidian vault's plugins directory:
@@ -37,7 +55,7 @@ Each GitHub release must include:
 
 4. In Obsidian:
 - Settings -> Community plugins -> Reload plugins
-- Enable `mcp-utils`
+- Enable `MCP-Util`
 
 ## Publish to Obsidian Community Plugins
 

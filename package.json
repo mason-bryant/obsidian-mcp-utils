@@ -1,0 +1,13 @@
+{
+  "name": "obsidian-mcp-utils",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Build tooling for MCP-Util Obsidian plugin",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev:sync": "node scripts/dev-sync.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
