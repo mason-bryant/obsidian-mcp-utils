@@ -1,4 +1,4 @@
-# Obsidian MCP Search Plugin
+# mcp-utils
 
 This plugin embeds a local MCP-compatible HTTP server inside Obsidian Desktop and exposes tools for:
 
@@ -37,7 +37,7 @@ Each GitHub release must include:
 
 4. In Obsidian:
 - Settings -> Community plugins -> Reload plugins
-- Enable `Obsidian MCP Search`
+- Enable `mcp-utils`
 
 ## Publish to Obsidian Community Plugins
 

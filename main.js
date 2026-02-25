@@ -1007,7 +1007,7 @@ class ObsidianMcpSettingTab extends PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl('h2', { text: 'Obsidian MCP Search Settings' });
+    containerEl.createEl('h2', { text: 'mcp-utils Settings' });
 
     new Setting(containerEl)
       .setName('Enable MCP server')
