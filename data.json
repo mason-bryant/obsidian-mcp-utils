@@ -1,0 +1,17 @@
+{
+  "serverEnabled": true,
+  "host": "127.0.0.1",
+  "port": 27125,
+  "authToken": "d53107f27d46645071af99f5c52bc8c9b6998ba946b4584b",
+  "writeMode": "off",
+  "indexMemoryCapMb": 64,
+  "aclRules": [
+    {
+      "path": "",
+      "readAllow": true,
+      "readDeny": false,
+      "writeAllow": false,
+      "writeDeny": false
+    }
+  ]
+}
